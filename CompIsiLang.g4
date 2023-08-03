@@ -1,4 +1,4 @@
-grammar CompLang;
+grammar CompIsiLang;
 
 @header {
 	import java.util.ArrayList;

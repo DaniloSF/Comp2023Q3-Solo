@@ -1,5 +1,4 @@
-// Generated from C:/Users/Danilo/Documents/UFABC/Compiladores/Comp2023Q3\CompLang.g4 by ANTLR 4.12.0
-package parser;
+// Generated from C:/Users/Danilo/Documents/UFABC/Compiladores/Comp2023Q3\CompIsiLang.g4 by ANTLR 4.12.0
 
 	import java.util.ArrayList;
 	import java.util.List;
@@ -21,7 +20,7 @@ import java.util.Iterator;
 import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue"})
-public class TypeExpressionParser extends Parser {
+public class CompIsiLangParser extends Parser {
 	static { RuntimeMetaData.checkVersion("4.12.0", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -93,7 +92,7 @@ public class TypeExpressionParser extends Parser {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "CompLang.g4"; }
+	public String getGrammarFileName() { return "CompIsiLang.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -133,7 +132,7 @@ public class TypeExpressionParser extends Parser {
 			program.run();
 		}
 
-	public TypeExpressionParser(TokenStream input) {
+	public CompIsiLangParser(TokenStream input) {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
@@ -158,15 +157,15 @@ public class TypeExpressionParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_programa; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof TypeExpressionListener ) ((TypeExpressionListener)listener).enterPrograma(this);
+			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterPrograma(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof TypeExpressionListener ) ((TypeExpressionListener)listener).exitPrograma(this);
+			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitPrograma(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof TypeExpressionVisitor ) return ((TypeExpressionVisitor<? extends T>)visitor).visitPrograma(this);
+			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitPrograma(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -234,22 +233,22 @@ public class TypeExpressionParser extends Parser {
 		public Lista_varContext lista_var() {
 			return getRuleContext(Lista_varContext.class,0);
 		}
-		public TerminalNode PF() { return getToken(TypeExpressionParser.PF, 0); }
+		public TerminalNode PF() { return getToken(CompIsiLangParser.PF, 0); }
 		public DeclContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_decl; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof TypeExpressionListener ) ((TypeExpressionListener)listener).enterDecl(this);
+			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterDecl(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof TypeExpressionListener ) ((TypeExpressionListener)listener).exitDecl(this);
+			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitDecl(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof TypeExpressionVisitor ) return ((TypeExpressionVisitor<? extends T>)visitor).visitDecl(this);
+			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitDecl(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -287,15 +286,15 @@ public class TypeExpressionParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_tipo; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof TypeExpressionListener ) ((TypeExpressionListener)listener).enterTipo(this);
+			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterTipo(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof TypeExpressionListener ) ((TypeExpressionListener)listener).exitTipo(this);
+			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitTipo(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof TypeExpressionVisitor ) return ((TypeExpressionVisitor<? extends T>)visitor).visitTipo(this);
+			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitTipo(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -340,13 +339,13 @@ public class TypeExpressionParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Lista_varContext extends ParserRuleContext {
-		public List<TerminalNode> ID() { return getTokens(TypeExpressionParser.ID); }
+		public List<TerminalNode> ID() { return getTokens(CompIsiLangParser.ID); }
 		public TerminalNode ID(int i) {
-			return getToken(TypeExpressionParser.ID, i);
+			return getToken(CompIsiLangParser.ID, i);
 		}
-		public List<TerminalNode> VIRG() { return getTokens(TypeExpressionParser.VIRG); }
+		public List<TerminalNode> VIRG() { return getTokens(CompIsiLangParser.VIRG); }
 		public TerminalNode VIRG(int i) {
-			return getToken(TypeExpressionParser.VIRG, i);
+			return getToken(CompIsiLangParser.VIRG, i);
 		}
 		public Lista_varContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -354,15 +353,15 @@ public class TypeExpressionParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_lista_var; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof TypeExpressionListener ) ((TypeExpressionListener)listener).enterLista_var(this);
+			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterLista_var(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof TypeExpressionListener ) ((TypeExpressionListener)listener).exitLista_var(this);
+			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitLista_var(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof TypeExpressionVisitor ) return ((TypeExpressionVisitor<? extends T>)visitor).visitLista_var(this);
+			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitLista_var(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -429,15 +428,15 @@ public class TypeExpressionParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_cmd; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof TypeExpressionListener ) ((TypeExpressionListener)listener).enterCmd(this);
+			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterCmd(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof TypeExpressionListener ) ((TypeExpressionListener)listener).exitCmd(this);
+			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitCmd(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof TypeExpressionVisitor ) return ((TypeExpressionVisitor<? extends T>)visitor).visitCmd(this);
+			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitCmd(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -494,16 +493,16 @@ public class TypeExpressionParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class CmdIfContext extends ParserRuleContext {
-		public TerminalNode AP() { return getToken(TypeExpressionParser.AP, 0); }
+		public TerminalNode AP() { return getToken(CompIsiLangParser.AP, 0); }
 		public List<ExprContext> expr() {
 			return getRuleContexts(ExprContext.class);
 		}
 		public ExprContext expr(int i) {
 			return getRuleContext(ExprContext.class,i);
 		}
-		public TerminalNode OPREL() { return getToken(TypeExpressionParser.OPREL, 0); }
-		public TerminalNode FP() { return getToken(TypeExpressionParser.FP, 0); }
-		public TerminalNode PF() { return getToken(TypeExpressionParser.PF, 0); }
+		public TerminalNode OPREL() { return getToken(CompIsiLangParser.OPREL, 0); }
+		public TerminalNode FP() { return getToken(CompIsiLangParser.FP, 0); }
+		public TerminalNode PF() { return getToken(CompIsiLangParser.PF, 0); }
 		public List<CmdContext> cmd() {
 			return getRuleContexts(CmdContext.class);
 		}
@@ -516,15 +515,15 @@ public class TypeExpressionParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_cmdIf; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof TypeExpressionListener ) ((TypeExpressionListener)listener).enterCmdIf(this);
+			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterCmdIf(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof TypeExpressionListener ) ((TypeExpressionListener)listener).exitCmdIf(this);
+			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitCmdIf(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof TypeExpressionVisitor ) return ((TypeExpressionVisitor<? extends T>)visitor).visitCmdIf(this);
+			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitCmdIf(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -634,25 +633,25 @@ public class TypeExpressionParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class CmdReadContext extends ParserRuleContext {
-		public TerminalNode AP() { return getToken(TypeExpressionParser.AP, 0); }
-		public TerminalNode ID() { return getToken(TypeExpressionParser.ID, 0); }
-		public TerminalNode FP() { return getToken(TypeExpressionParser.FP, 0); }
-		public TerminalNode PF() { return getToken(TypeExpressionParser.PF, 0); }
+		public TerminalNode AP() { return getToken(CompIsiLangParser.AP, 0); }
+		public TerminalNode ID() { return getToken(CompIsiLangParser.ID, 0); }
+		public TerminalNode FP() { return getToken(CompIsiLangParser.FP, 0); }
+		public TerminalNode PF() { return getToken(CompIsiLangParser.PF, 0); }
 		public CmdReadContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_cmdRead; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof TypeExpressionListener ) ((TypeExpressionListener)listener).enterCmdRead(this);
+			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterCmdRead(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof TypeExpressionListener ) ((TypeExpressionListener)listener).exitCmdRead(this);
+			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitCmdRead(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof TypeExpressionVisitor ) return ((TypeExpressionVisitor<? extends T>)visitor).visitCmdRead(this);
+			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitCmdRead(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -696,26 +695,26 @@ public class TypeExpressionParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class CmdWriteContext extends ParserRuleContext {
-		public TerminalNode AP() { return getToken(TypeExpressionParser.AP, 0); }
-		public TerminalNode FP() { return getToken(TypeExpressionParser.FP, 0); }
-		public TerminalNode PF() { return getToken(TypeExpressionParser.PF, 0); }
-		public TerminalNode ID() { return getToken(TypeExpressionParser.ID, 0); }
-		public TerminalNode TEXT() { return getToken(TypeExpressionParser.TEXT, 0); }
+		public TerminalNode AP() { return getToken(CompIsiLangParser.AP, 0); }
+		public TerminalNode FP() { return getToken(CompIsiLangParser.FP, 0); }
+		public TerminalNode PF() { return getToken(CompIsiLangParser.PF, 0); }
+		public TerminalNode ID() { return getToken(CompIsiLangParser.ID, 0); }
+		public TerminalNode TEXT() { return getToken(CompIsiLangParser.TEXT, 0); }
 		public CmdWriteContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_cmdWrite; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof TypeExpressionListener ) ((TypeExpressionListener)listener).enterCmdWrite(this);
+			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterCmdWrite(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof TypeExpressionListener ) ((TypeExpressionListener)listener).exitCmdWrite(this);
+			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitCmdWrite(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof TypeExpressionVisitor ) return ((TypeExpressionVisitor<? extends T>)visitor).visitCmdWrite(this);
+			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitCmdWrite(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -780,27 +779,27 @@ public class TypeExpressionParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class CmdAttrContext extends ParserRuleContext {
-		public TerminalNode ID() { return getToken(TypeExpressionParser.ID, 0); }
-		public TerminalNode ATTR() { return getToken(TypeExpressionParser.ATTR, 0); }
+		public TerminalNode ID() { return getToken(CompIsiLangParser.ID, 0); }
+		public TerminalNode ATTR() { return getToken(CompIsiLangParser.ATTR, 0); }
 		public ExprContext expr() {
 			return getRuleContext(ExprContext.class,0);
 		}
-		public TerminalNode PF() { return getToken(TypeExpressionParser.PF, 0); }
+		public TerminalNode PF() { return getToken(CompIsiLangParser.PF, 0); }
 		public CmdAttrContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_cmdAttr; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof TypeExpressionListener ) ((TypeExpressionListener)listener).enterCmdAttr(this);
+			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterCmdAttr(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof TypeExpressionListener ) ((TypeExpressionListener)listener).exitCmdAttr(this);
+			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitCmdAttr(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof TypeExpressionVisitor ) return ((TypeExpressionVisitor<? extends T>)visitor).visitCmdAttr(this);
+			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitCmdAttr(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -869,15 +868,15 @@ public class TypeExpressionParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_expr; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof TypeExpressionListener ) ((TypeExpressionListener)listener).enterExpr(this);
+			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterExpr(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof TypeExpressionListener ) ((TypeExpressionListener)listener).exitExpr(this);
+			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitExpr(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof TypeExpressionVisitor ) return ((TypeExpressionVisitor<? extends T>)visitor).visitExpr(this);
+			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitExpr(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -920,23 +919,23 @@ public class TypeExpressionParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class TermoContext extends ParserRuleContext {
-		public TerminalNode NUMBER() { return getToken(TypeExpressionParser.NUMBER, 0); }
-		public TerminalNode ID() { return getToken(TypeExpressionParser.ID, 0); }
+		public TerminalNode NUMBER() { return getToken(CompIsiLangParser.NUMBER, 0); }
+		public TerminalNode ID() { return getToken(CompIsiLangParser.ID, 0); }
 		public TermoContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_termo; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof TypeExpressionListener ) ((TypeExpressionListener)listener).enterTermo(this);
+			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterTermo(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof TypeExpressionListener ) ((TypeExpressionListener)listener).exitTermo(this);
+			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitTermo(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof TypeExpressionVisitor ) return ((TypeExpressionVisitor<? extends T>)visitor).visitTermo(this);
+			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitTermo(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1002,23 +1001,23 @@ public class TypeExpressionParser extends Parser {
 		public TermoContext termo() {
 			return getRuleContext(TermoContext.class,0);
 		}
-		public TerminalNode SUM() { return getToken(TypeExpressionParser.SUM, 0); }
-		public TerminalNode SUB() { return getToken(TypeExpressionParser.SUB, 0); }
+		public TerminalNode SUM() { return getToken(CompIsiLangParser.SUM, 0); }
+		public TerminalNode SUB() { return getToken(CompIsiLangParser.SUB, 0); }
 		public ExprlContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_exprl; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof TypeExpressionListener ) ((TypeExpressionListener)listener).enterExprl(this);
+			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterExprl(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof TypeExpressionListener ) ((TypeExpressionListener)listener).exitExprl(this);
+			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitExprl(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof TypeExpressionVisitor ) return ((TypeExpressionVisitor<? extends T>)visitor).visitExprl(this);
+			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitExprl(this);
 			else return visitor.visitChildren(this);
 		}
 	}

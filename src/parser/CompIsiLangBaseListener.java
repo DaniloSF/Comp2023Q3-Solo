@@ -1,4 +1,4 @@
-// Generated from C:/Users/Danilo/Documents/UFABC/Compiladores/Comp2023Q3\CompLang.g4 by ANTLR 4.12.0
+// Generated from C:/Users/Danilo/Documents/UFABC/Compiladores/Comp2023Q3\CompIsiLang.g4 by ANTLR 4.12.0
 package parser;
 
 	import java.util.ArrayList;
@@ -17,156 +17,156 @@ import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 /**
- * This class provides an empty implementation of {@link TypeExpressionListener},
+ * This class provides an empty implementation of {@link CompIsiLangListener},
  * which can be extended to create a listener which only needs to handle a subset
  * of the available methods.
  */
 @SuppressWarnings("CheckReturnValue")
-public class TypeExpressionBaseListener implements TypeExpressionListener {
+public class CompIsiLangBaseListener implements CompIsiLangListener {
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterPrograma(TypeExpressionParser.ProgramaContext ctx) { }
+	@Override public void enterPrograma(CompIsiLangParser.ProgramaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitPrograma(TypeExpressionParser.ProgramaContext ctx) { }
+	@Override public void exitPrograma(CompIsiLangParser.ProgramaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDecl(TypeExpressionParser.DeclContext ctx) { }
+	@Override public void enterDecl(CompIsiLangParser.DeclContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDecl(TypeExpressionParser.DeclContext ctx) { }
+	@Override public void exitDecl(CompIsiLangParser.DeclContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTipo(TypeExpressionParser.TipoContext ctx) { }
+	@Override public void enterTipo(CompIsiLangParser.TipoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTipo(TypeExpressionParser.TipoContext ctx) { }
+	@Override public void exitTipo(CompIsiLangParser.TipoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterLista_var(TypeExpressionParser.Lista_varContext ctx) { }
+	@Override public void enterLista_var(CompIsiLangParser.Lista_varContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitLista_var(TypeExpressionParser.Lista_varContext ctx) { }
+	@Override public void exitLista_var(CompIsiLangParser.Lista_varContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCmd(TypeExpressionParser.CmdContext ctx) { }
+	@Override public void enterCmd(CompIsiLangParser.CmdContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCmd(TypeExpressionParser.CmdContext ctx) { }
+	@Override public void exitCmd(CompIsiLangParser.CmdContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCmdIf(TypeExpressionParser.CmdIfContext ctx) { }
+	@Override public void enterCmdIf(CompIsiLangParser.CmdIfContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCmdIf(TypeExpressionParser.CmdIfContext ctx) { }
+	@Override public void exitCmdIf(CompIsiLangParser.CmdIfContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCmdRead(TypeExpressionParser.CmdReadContext ctx) { }
+	@Override public void enterCmdRead(CompIsiLangParser.CmdReadContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCmdRead(TypeExpressionParser.CmdReadContext ctx) { }
+	@Override public void exitCmdRead(CompIsiLangParser.CmdReadContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCmdWrite(TypeExpressionParser.CmdWriteContext ctx) { }
+	@Override public void enterCmdWrite(CompIsiLangParser.CmdWriteContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCmdWrite(TypeExpressionParser.CmdWriteContext ctx) { }
+	@Override public void exitCmdWrite(CompIsiLangParser.CmdWriteContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCmdAttr(TypeExpressionParser.CmdAttrContext ctx) { }
+	@Override public void enterCmdAttr(CompIsiLangParser.CmdAttrContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCmdAttr(TypeExpressionParser.CmdAttrContext ctx) { }
+	@Override public void exitCmdAttr(CompIsiLangParser.CmdAttrContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpr(TypeExpressionParser.ExprContext ctx) { }
+	@Override public void enterExpr(CompIsiLangParser.ExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpr(TypeExpressionParser.ExprContext ctx) { }
+	@Override public void exitExpr(CompIsiLangParser.ExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTermo(TypeExpressionParser.TermoContext ctx) { }
+	@Override public void enterTermo(CompIsiLangParser.TermoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTermo(TypeExpressionParser.TermoContext ctx) { }
+	@Override public void exitTermo(CompIsiLangParser.TermoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExprl(TypeExpressionParser.ExprlContext ctx) { }
+	@Override public void enterExprl(CompIsiLangParser.ExprlContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExprl(TypeExpressionParser.ExprlContext ctx) { }
+	@Override public void exitExprl(CompIsiLangParser.ExprlContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

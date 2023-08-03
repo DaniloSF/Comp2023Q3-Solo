@@ -1,5 +1,4 @@
-// Generated from C:/Users/Danilo/Documents/UFABC/Compiladores/Comp2023Q3\CompLang.g4 by ANTLR 4.12.0
-package parser;
+// Generated from C:/Users/Danilo/Documents/UFABC/Compiladores/Comp2023Q3\CompIsiLang.g4 by ANTLR 4.12.0
 
 	import java.util.ArrayList;
 	import java.util.List;
@@ -21,7 +20,7 @@ import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.misc.*;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue"})
-public class TypeExpressionLexer extends Lexer {
+public class CompIsiLangLexer extends Lexer {
 	static { RuntimeMetaData.checkVersion("4.12.0", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -127,13 +126,13 @@ public class TypeExpressionLexer extends Lexer {
 		}
 
 
-	public TypeExpressionLexer(CharStream input) {
+	public CompIsiLangLexer(CharStream input) {
 		super(input);
 		_interp = new LexerATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
 	@Override
-	public String getGrammarFileName() { return "CompLang.g4"; }
+	public String getGrammarFileName() { return "CompIsiLang.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
