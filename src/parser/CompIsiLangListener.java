@@ -39,6 +39,16 @@ public interface CompIsiLangListener extends ParseTreeListener {
 	 */
 	void exitDecl(CompIsiLangParser.DeclContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link CompIsiLangParser#bloco}.
+	 * @param ctx the parse tree
+	 */
+	void enterBloco(CompIsiLangParser.BlocoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CompIsiLangParser#bloco}.
+	 * @param ctx the parse tree
+	 */
+	void exitBloco(CompIsiLangParser.BlocoContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link CompIsiLangParser#tipo}.
 	 * @param ctx the parse tree
 	 */

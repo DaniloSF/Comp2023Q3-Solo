@@ -34,6 +34,12 @@ public interface CompIsiLangVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitDecl(CompIsiLangParser.DeclContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link CompIsiLangParser#bloco}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBloco(CompIsiLangParser.BlocoContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link CompIsiLangParser#tipo}.
 	 * @param ctx the parse tree
 	 * @return the visitor result

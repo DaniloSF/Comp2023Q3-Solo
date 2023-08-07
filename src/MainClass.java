@@ -13,6 +13,7 @@ public class MainClass {
 			System.out.println("Starting Expression Analysis");
 			parser.programa();
 			System.out.println("Compilation Successful! Good Job");
+
 			System.out.println("-----------------------------");
 			parser.exibirID();
 			System.out.println("------- TARGET --------------");

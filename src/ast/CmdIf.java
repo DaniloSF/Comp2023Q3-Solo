@@ -43,7 +43,7 @@ public class CmdIf extends AbstractCommand{
 		for (AbstractCommand cmd: listaTrue) {
 			str.append(cmd.generateCode());
 		}
-		if (!listaFalse.isEmpty()) {
+		if (listaFalse != null && !listaFalse.isEmpty()) {
 			str2.append("else {\n");
 			for (AbstractCommand cmd: listaFalse) {
 				str2.append(cmd.generateCode());

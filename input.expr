@@ -10,16 +10,19 @@ programa
 	b := 3 + 2 - 1 + 5 - 3 + a.
 	escreva(a).
 	escreva(b).
-	se (a > b) entao
-		escreva(b).
-		escreva("Hello World").
-	senao
-		se (a < b) entao
+	se (a > b) entao {
+		escreva(a).
+	} senao {
+		se (a < b) entao {
 			escreva(a).
 			escreva("goodbye world").
-		senao
+		} senao {
 			escreva("nao sei").
-		fimse.
-	fimse.		
-		
+		}.
+	}.
+	escreva("Hmm").
+	se (a < b) entao {
+	    escreva("WOW").
+	}.
+	escreva("Oi").
 fimprog.

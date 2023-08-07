@@ -6,8 +6,7 @@ b=3+2-1+5-3+2;
 alert(a);
 alert(b);
 if (2>8) {
- alert(b);
-alert("Hello World");
+ alert(a);
 }
 else {
 if (2<8) {
@@ -18,4 +17,9 @@ else {
 alert("nao sei");
 }
 }
+alert("Hmm");
+if (2<8) {
+ alert("WOW");
+}
+alert("Oi");
 

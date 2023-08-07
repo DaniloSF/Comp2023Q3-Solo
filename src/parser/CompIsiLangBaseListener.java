@@ -52,6 +52,18 @@ public class CompIsiLangBaseListener implements CompIsiLangListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterBloco(CompIsiLangParser.BlocoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitBloco(CompIsiLangParser.BlocoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterTipo(CompIsiLangParser.TipoContext ctx) { }
 	/**
 	 * {@inheritDoc}

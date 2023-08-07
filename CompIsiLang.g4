@@ -42,11 +42,13 @@ grammar CompIsiLang;
 	}
 }
 programa:
-	'programa' decl+ cmd+ 'fimprog.' {
-				program.setComandos(stack.pop());
-			};
+	'programa' decl+ bloco 'fimprog.' {
+        program.setComandos(stack.pop());
+    };
 
 decl: tipo lista_var PF;
+
+bloco: (cmd PF)+;
 
 tipo:
 	'INTEGER' { currentType = DataType.INTEGER; }
@@ -63,38 +65,41 @@ cmd: cmdAttr | cmdRead | cmdWrite | cmdIf;
 
 cmdIf:
 	'se' {
-				stack.push(new ArrayList<AbstractCommand>());
-				BinaryExpression _relExpr = new BinaryExpression();				
-				CmdIf _cmdIf = new CmdIf();
-			} AP expr {
-				_relExpr.setLeftSide(expression);
-			} OPREL {
-				_relExpr.setOperator(_input.LT(-1).getText().charAt(0));
-			} expr {
-				_relExpr.setRightSide(expression);
-				_cmdIf.setExpr(_relExpr);
-				
-			} FP 'entao' cmd+ {
-				_cmdIf.setListaTrue(stack.pop());
-					
-			} (
-		'senao' {
-				stack.push(new ArrayList<AbstractCommand>());
-			} cmd+
-	)? 'fimse' PF {
-				_cmdIf.setListaFalse(stack.pop());
-				stack.peek().add(_cmdIf);
-			};
+            stack.push(new ArrayList<AbstractCommand>());
+            BinaryExpression _relExpr = new BinaryExpression();
+            CmdIf _cmdIf = new CmdIf();
+        } AP expr {
+            _relExpr.setLeftSide(expression);
+        } OPREL {
+            _relExpr.setOperator(_input.LT(-1).getText().charAt(0));
+        } expr {
+            _relExpr.setRightSide(expression);
+            _cmdIf.setExpr(_relExpr);
+
+        } FP 'entao' AC bloco FC {
+            _cmdIf.setListaTrue(stack.pop());
+        }
+        ('senao' AC {
+            stack.push(new ArrayList<AbstractCommand>());
+        } bloco {
+            _cmdIf.setListaFalse(stack.pop());
+        } FC)?
+        {
+            stack.peek().add(_cmdIf);
+        }
+        ;
+
 
 cmdRead:
-	'leia' AP ID {
-				Identifier id = symbolTable.get(_input.LT(-1).getText());
-				if (id == null){
-					throw new RuntimeException("Undeclared Variable");
-				}
-				CmdRead _read = new CmdRead(id);
-				stack.peek().add(_read);
-			 } FP PF;
+	'leia' AP ID
+	{
+        Identifier id = symbolTable.get(_input.LT(-1).getText());
+        if (id == null){
+            throw new RuntimeException("Undeclared Variable");
+        }
+        CmdRead _read = new CmdRead(id);
+        stack.peek().add(_read);
+    } FP;
 
 cmdWrite:
 	'escreva' AP (
@@ -111,62 +116,62 @@ cmdWrite:
 	         	stack.peek().add(_write);
 	         	
 	         }
-	) FP PF;
+	) FP;
 
 cmdAttr:
 	ID {
-				idAtribuido = _input.LT(-1).getText();
-				if (!symbolTable.exists(_input.LT(-1).getText())){
-					throw new RuntimeException("Semantic ERROR - Undeclared Identifier");
-				}
-				leftDT = symbolTable.get(_input.LT(-1).getText()).getType();
-				rightDT = null;
-			} ATTR expr PF {
-					// logica para atribuir o valor da expressao no identificador
-					Identifier id = symbolTable.get(idAtribuido);
-					id.setValue(expression.eval());
-					symbolTable.add(idAtribuido, id);
-					
-					//System.out.println("EVAL ("+expression+") = "+expression.eval());
-					
-					CmdAttrib _attr = new CmdAttrib(id, expression);
-					stack.peek().add(_attr);
-					expression = null;					
-				};
+        idAtribuido = _input.LT(-1).getText();
+        if (!symbolTable.exists(_input.LT(-1).getText())){
+            throw new RuntimeException("Semantic ERROR - Undeclared Identifier");
+        }
+        leftDT = symbolTable.get(_input.LT(-1).getText()).getType();
+        rightDT = null;
+    } ATTR expr {
+        // logica para atribuir o valor da expressao no identificador
+        Identifier id = symbolTable.get(idAtribuido);
+        id.setValue(expression.eval());
+        symbolTable.add(idAtribuido, id);
+
+        //System.out.println("EVAL ("+expression+") = "+expression.eval());
+
+        CmdAttrib _attr = new CmdAttrib(id, expression);
+        stack.peek().add(_attr);
+        expression = null;
+    };
 
 expr: termo exprl*;
 
 termo:
 	NUMBER {
-				expression = new NumberExpression(Integer.parseInt(_input.LT(-1).getText()));
-			}
+        expression = new NumberExpression(Integer.parseInt(_input.LT(-1).getText()));
+    }
 	| ID {
-				if (!symbolTable.exists(_input.LT(-1).getText())){
-					throw new RuntimeException("Semantic ERROR - Undeclared Identifier: "+_input.LT(-1).getText());
-				}
-				rightDT = symbolTable.get(_input.LT(-1).getText()).getType();
-				if (leftDT != rightDT){
-					throw new RuntimeException("Semantic ERROR - Type Mismatching "+leftDT+ "-"+rightDT);
-				}					
-				
-				Identifier id = symbolTable.get(_input.LT(-1).getText());
-				if (id.getValue() != null){
-					expression = new NumberExpression(id.getValue());
-				}
-				else{
-					throw new RuntimeException("Semantic ERROR - Unassigned variable");
-				}
-			};
+        if (!symbolTable.exists(_input.LT(-1).getText())){
+            throw new RuntimeException("Semantic ERROR - Undeclared Identifier: "+_input.LT(-1).getText());
+        }
+        rightDT = symbolTable.get(_input.LT(-1).getText()).getType();
+        if (leftDT != rightDT){
+            throw new RuntimeException("Semantic ERROR - Type Mismatching "+leftDT+ "-"+rightDT);
+        }
 
-exprl: (SUM | SUB) { 
-				operator = _input.LT(-1).getText().charAt(0);
-				BinaryExpression _exprADD = new BinaryExpression(operator);
-				_exprADD.setLeftSide(expression);
-			} termo {
-				_exprADD.setRightSide(expression);
-				expression = _exprADD;
-				
-			};
+        Identifier id = symbolTable.get(_input.LT(-1).getText());
+        if (id.getValue() != null){
+            expression = new NumberExpression(id.getValue());
+        }
+        else{
+            throw new RuntimeException("Semantic ERROR - Unassigned variable");
+        }
+    };
+
+exprl:
+(SUM | SUB) {
+    operator = _input.LT(-1).getText().charAt(0);
+    BinaryExpression _exprADD = new BinaryExpression(operator);
+    _exprADD.setLeftSide(expression);
+} termo {
+    _exprADD.setRightSide(expression);
+    expression = _exprADD;
+};
 
 NUMBER: [0-9]+;
 
@@ -187,6 +192,9 @@ VIRG: ',';
 PF: '.';
 
 AP: '(';
-
 FP: ')';
+
+AC: '{';
+FC: '}';
+
 BLANK: (' ' | '\t' | '\n' | '\r') -> skip; 
