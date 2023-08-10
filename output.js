@@ -1,15 +1,15 @@
 alert("Hello World!");
 alert("Digite o valor C");
 c = prompt("Type you input");
-a=2;
-b=3+2-1+5-3+2;
+a=2.0;
+b=3.2+2.0-1.0+5.0-3.0+a;
 alert(a);
 alert(b);
-if (2>8) {
+if (a>=b) {
  alert(a);
 }
 else {
-if (2<8) {
+if (a<b) {
  alert(a);
 alert("goodbye world");
 }
@@ -18,7 +18,7 @@ alert("nao sei");
 }
 }
 alert("Hmm");
-if (2<8) {
+if (a<b) {
  alert("WOW");
 }
 alert("Oi");

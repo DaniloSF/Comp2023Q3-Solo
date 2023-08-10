@@ -16,7 +16,7 @@ grammar CompIsiLang;
 	private SymbolTable symbolTable = new SymbolTable();
 	private DataType currentType;
 	private AbstractExpression expression;
-	private char operator;
+	private String operator;
 	private DataType leftDT;
 	private DataType rightDT;
 	private String   idAtribuido;
@@ -55,11 +55,22 @@ tipo:
 	| 'REAL' { currentType = DataType.REAL; };
 
 lista_var:
-	ID { symbolTable.add(_input.LT(-1).getText(), new Identifier(_input.LT(-1).getText(), currentType)); 
-		} (
-		VIRG ID { symbolTable.add(_input.LT(-1).getText(), new Identifier(_input.LT(-1).getText(), currentType)); 
-			}
-	)*;
+ID {
+    Identifier id = symbolTable.get(_input.LT(-1).getText());
+    if (id != null){
+        throw new RuntimeException("Variable Already Declared");
+    }
+    symbolTable.add(_input.LT(-1).getText(), new Identifier(_input.LT(-1).getText(), currentType));
+} (
+    VIRG ID
+    {
+    id = symbolTable.get(_input.LT(-1).getText());
+    if (id != null){
+        throw new RuntimeException("Variable Already Declared");
+    }
+    symbolTable.add(_input.LT(-1).getText(), new Identifier(_input.LT(-1).getText(), currentType));
+    }
+)*;
 
 cmd: cmdAttr | cmdRead | cmdWrite | cmdIf;
 
@@ -71,7 +82,7 @@ cmdIf:
         } AP expr {
             _relExpr.setLeftSide(expression);
         } OPREL {
-            _relExpr.setOperator(_input.LT(-1).getText().charAt(0));
+            _relExpr.setOperator(_input.LT(-1).getText());
         } expr {
             _relExpr.setRightSide(expression);
             _cmdIf.setExpr(_relExpr);
@@ -142,8 +153,12 @@ cmdAttr:
 expr: termo exprl*;
 
 termo:
-	NUMBER {
-        expression = new NumberExpression(Integer.parseInt(_input.LT(-1).getText()));
+	number {
+	    System.out.println("WOW!");
+	    if (leftDT != rightDT){
+            throw new RuntimeException("Semantic ERROR - Type Mismatching in line " + _input.LT(-1).getLine()+" "+leftDT+ "-"+rightDT);
+        }
+        expression = new NumberExpression(_input.LT(-1).getText(), rightDT);
     }
 	| ID {
         if (!symbolTable.exists(_input.LT(-1).getText())){
@@ -151,21 +166,16 @@ termo:
         }
         rightDT = symbolTable.get(_input.LT(-1).getText()).getType();
         if (leftDT != rightDT){
-            throw new RuntimeException("Semantic ERROR - Type Mismatching "+leftDT+ "-"+rightDT);
+            throw new RuntimeException("Semantic ERROR - Type Mismatching in line " + _input.LT(-1).getLine()+" "+leftDT+ "-"+rightDT);
         }
 
         Identifier id = symbolTable.get(_input.LT(-1).getText());
-        if (id.getValue() != null){
-            expression = new NumberExpression(id.getValue());
-        }
-        else{
-            throw new RuntimeException("Semantic ERROR - Unassigned variable");
-        }
+        expression = new IDExpression(id, id.getValue());
     };
 
 exprl:
 (SUM | SUB) {
-    operator = _input.LT(-1).getText().charAt(0);
+    operator = _input.LT(-1).getText();
     BinaryExpression _exprADD = new BinaryExpression(operator);
     _exprADD.setLeftSide(expression);
 } termo {
@@ -173,9 +183,13 @@ exprl:
     expression = _exprADD;
 };
 
-NUMBER: [0-9]+;
+fragment DIGIT: [0-9];
+number: INT { rightDT = DataType.INTEGER;}
+        | FLOAT { rightDT = DataType.REAL; };
+FLOAT: DIGIT+ '.' DIGIT+ ;
+INT: DIGIT+ ;
 
-TEXT: '"' ([a-z] | [A-Z] | [0-9] | ' ' | '\t' | '!' | '-')* '"';
+TEXT: '"' ([a-z] | [A-Z] | DIGIT | ' ' | '\t' | '!' | '-')* '"';
 
 ATTR: ':=';
 
@@ -185,7 +199,7 @@ SUB: '-';
 
 OPREL: '>' | '>=' | '<' | '<=' | '==' | '<>';
 
-ID: [a-z] ([a-z] | [A-Z] | [0-9])*;
+ID: [a-z] ([a-z] | [A-Z] | DIGIT)*;
 
 VIRG: ',';
 

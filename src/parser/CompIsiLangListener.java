@@ -148,4 +148,14 @@ public interface CompIsiLangListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitExprl(CompIsiLangParser.ExprlContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link CompIsiLangParser#number}.
+	 * @param ctx the parse tree
+	 */
+	void enterNumber(CompIsiLangParser.NumberContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CompIsiLangParser#number}.
+	 * @param ctx the parse tree
+	 */
+	void exitNumber(CompIsiLangParser.NumberContext ctx);
 }

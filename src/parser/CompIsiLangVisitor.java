@@ -99,4 +99,10 @@ public interface CompIsiLangVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitExprl(CompIsiLangParser.ExprlContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link CompIsiLangParser#number}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitNumber(CompIsiLangParser.NumberContext ctx);
 }
