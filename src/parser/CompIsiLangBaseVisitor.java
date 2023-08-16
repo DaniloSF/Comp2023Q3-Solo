@@ -1,16 +1,5 @@
-// Generated from C:/Users/Danilo/Documents/UFABC/Compiladores/Comp2023Q3\CompIsiLang.g4 by ANTLR 4.12.0
+// Generated from C:/Users/Danilo/Documents/UFABC/Compiladores/Comp2023Q3-Solo\CompIsiLang.g4 by ANTLR 4.12.0
 package parser;
-
-	import java.util.ArrayList;
-	import java.util.List;
-	import symbols.DataType;
-	import java.util.Stack;
-	import symbols.Identifier;
-	import symbols.SymbolTable;
-	import expressions.*;
-	import ast.*;
-	
-
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**
@@ -43,7 +32,7 @@ public class CompIsiLangBaseVisitor<T> extends AbstractParseTreeVisitor<T> imple
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitBloco(CompIsiLangParser.BlocoContext ctx) { return visitChildren(ctx); }
+	@Override public T visitBlock(CompIsiLangParser.BlockContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -106,6 +95,13 @@ public class CompIsiLangBaseVisitor<T> extends AbstractParseTreeVisitor<T> imple
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
+	@Override public T visitExprl(CompIsiLangParser.ExprlContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
 	@Override public T visitTermo(CompIsiLangParser.TermoContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
@@ -113,7 +109,21 @@ public class CompIsiLangBaseVisitor<T> extends AbstractParseTreeVisitor<T> imple
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExprl(CompIsiLangParser.ExprlContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTermol(CompIsiLangParser.TermolContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitFator(CompIsiLangParser.FatorContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitLogicExpr(CompIsiLangParser.LogicExprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *

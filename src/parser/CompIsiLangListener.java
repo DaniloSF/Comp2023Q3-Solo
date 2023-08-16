@@ -1,16 +1,5 @@
-// Generated from C:/Users/Danilo/Documents/UFABC/Compiladores/Comp2023Q3\CompIsiLang.g4 by ANTLR 4.12.0
+// Generated from C:/Users/Danilo/Documents/UFABC/Compiladores/Comp2023Q3-Solo\CompIsiLang.g4 by ANTLR 4.12.0
 package parser;
-
-	import java.util.ArrayList;
-	import java.util.List;
-	import symbols.DataType;
-	import java.util.Stack;
-	import symbols.Identifier;
-	import symbols.SymbolTable;
-	import expressions.*;
-	import ast.*;
-	
-
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -39,15 +28,15 @@ public interface CompIsiLangListener extends ParseTreeListener {
 	 */
 	void exitDecl(CompIsiLangParser.DeclContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link CompIsiLangParser#bloco}.
+	 * Enter a parse tree produced by {@link CompIsiLangParser#block}.
 	 * @param ctx the parse tree
 	 */
-	void enterBloco(CompIsiLangParser.BlocoContext ctx);
+	void enterBlock(CompIsiLangParser.BlockContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link CompIsiLangParser#bloco}.
+	 * Exit a parse tree produced by {@link CompIsiLangParser#block}.
 	 * @param ctx the parse tree
 	 */
-	void exitBloco(CompIsiLangParser.BlocoContext ctx);
+	void exitBlock(CompIsiLangParser.BlockContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link CompIsiLangParser#tipo}.
 	 * @param ctx the parse tree
@@ -129,6 +118,16 @@ public interface CompIsiLangListener extends ParseTreeListener {
 	 */
 	void exitExpr(CompIsiLangParser.ExprContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link CompIsiLangParser#exprl}.
+	 * @param ctx the parse tree
+	 */
+	void enterExprl(CompIsiLangParser.ExprlContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CompIsiLangParser#exprl}.
+	 * @param ctx the parse tree
+	 */
+	void exitExprl(CompIsiLangParser.ExprlContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link CompIsiLangParser#termo}.
 	 * @param ctx the parse tree
 	 */
@@ -139,15 +138,35 @@ public interface CompIsiLangListener extends ParseTreeListener {
 	 */
 	void exitTermo(CompIsiLangParser.TermoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link CompIsiLangParser#exprl}.
+	 * Enter a parse tree produced by {@link CompIsiLangParser#termol}.
 	 * @param ctx the parse tree
 	 */
-	void enterExprl(CompIsiLangParser.ExprlContext ctx);
+	void enterTermol(CompIsiLangParser.TermolContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link CompIsiLangParser#exprl}.
+	 * Exit a parse tree produced by {@link CompIsiLangParser#termol}.
 	 * @param ctx the parse tree
 	 */
-	void exitExprl(CompIsiLangParser.ExprlContext ctx);
+	void exitTermol(CompIsiLangParser.TermolContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link CompIsiLangParser#fator}.
+	 * @param ctx the parse tree
+	 */
+	void enterFator(CompIsiLangParser.FatorContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CompIsiLangParser#fator}.
+	 * @param ctx the parse tree
+	 */
+	void exitFator(CompIsiLangParser.FatorContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link CompIsiLangParser#logicExpr}.
+	 * @param ctx the parse tree
+	 */
+	void enterLogicExpr(CompIsiLangParser.LogicExprContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CompIsiLangParser#logicExpr}.
+	 * @param ctx the parse tree
+	 */
+	void exitLogicExpr(CompIsiLangParser.LogicExprContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link CompIsiLangParser#number}.
 	 * @param ctx the parse tree

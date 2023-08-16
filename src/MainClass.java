@@ -1,5 +1,9 @@
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
+import org.antlr.v4.runtime.tree.ParseTree;
+
+import ast.Program;
+import listener.CompIsiLangVisitorImpl;
 import parser.CompIsiLangLexer;
 import parser.CompIsiLangParser;
 
@@ -9,15 +13,12 @@ public class MainClass {
 			CompIsiLangLexer lexer = new CompIsiLangLexer(CharStreams.fromFileName("input.expr"));
 			CommonTokenStream tokenStream = new CommonTokenStream(lexer);
 			CompIsiLangParser parser = new CompIsiLangParser(tokenStream);
-			parser.init();
-			System.out.println("Starting Expression Analysis");
-			parser.programa();
-			System.out.println("Compilation Successful! Good Job");
+			ParseTree tree = parser.programa();
+			CompIsiLangVisitorImpl visitor = new CompIsiLangVisitorImpl();
 
-			System.out.println("-----------------------------");
-			parser.exibirID();
-			System.out.println("------- TARGET --------------");
-			parser.generateObjectCode();
+			Program program = (Program) visitor.visit(tree);
+
+			program.generateTarget();
 			// parser.runInterpreter();
 		} catch (Exception ex) {
 			ex.printStackTrace();

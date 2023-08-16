@@ -1,10 +1,11 @@
 package expressions;
 
+import symbols.DataType;
 import symbols.Identifier;
 
-public class IDExpression extends AbstractExpression{
+public class IDExpression extends AbstractExpression {
 	private Identifier id;
-	private double value;
+	private Object value;
 
 	public Identifier getId() {
 		return id;
@@ -14,7 +15,7 @@ public class IDExpression extends AbstractExpression{
 		this.id = id;
 	}
 
-	public double getValue() {
+	public Object getValue() {
 		return value;
 	}
 
@@ -22,16 +23,22 @@ public class IDExpression extends AbstractExpression{
 		this.value = value;
 	}
 
-	public IDExpression(Identifier id, double value) {
+	public IDExpression(Identifier id, Object value) {
 		this.id = id;
 		this.value = value;
 	}
 
-	public double eval() {
+	public Object eval() {
 		return this.value;
 	}
-	
+
 	public String toString() {
 		return this.id.getText();
+	}
+
+	@Override
+	public DataType getType() {
+		// TODO Auto-generated method stub
+		return id.getType();
 	}
 }

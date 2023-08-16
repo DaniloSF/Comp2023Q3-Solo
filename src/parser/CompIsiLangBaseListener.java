@@ -1,16 +1,5 @@
-// Generated from C:/Users/Danilo/Documents/UFABC/Compiladores/Comp2023Q3\CompIsiLang.g4 by ANTLR 4.12.0
+// Generated from C:/Users/Danilo/Documents/UFABC/Compiladores/Comp2023Q3-Solo\CompIsiLang.g4 by ANTLR 4.12.0
 package parser;
-
-	import java.util.ArrayList;
-	import java.util.List;
-	import symbols.DataType;
-	import java.util.Stack;
-	import symbols.Identifier;
-	import symbols.SymbolTable;
-	import expressions.*;
-	import ast.*;
-	
-
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -52,13 +41,13 @@ public class CompIsiLangBaseListener implements CompIsiLangListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBloco(CompIsiLangParser.BlocoContext ctx) { }
+	@Override public void enterBlock(CompIsiLangParser.BlockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBloco(CompIsiLangParser.BlocoContext ctx) { }
+	@Override public void exitBlock(CompIsiLangParser.BlockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -160,6 +149,18 @@ public class CompIsiLangBaseListener implements CompIsiLangListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterExprl(CompIsiLangParser.ExprlContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitExprl(CompIsiLangParser.ExprlContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterTermo(CompIsiLangParser.TermoContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -172,13 +173,37 @@ public class CompIsiLangBaseListener implements CompIsiLangListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExprl(CompIsiLangParser.ExprlContext ctx) { }
+	@Override public void enterTermol(CompIsiLangParser.TermolContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExprl(CompIsiLangParser.ExprlContext ctx) { }
+	@Override public void exitTermol(CompIsiLangParser.TermolContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFator(CompIsiLangParser.FatorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFator(CompIsiLangParser.FatorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterLogicExpr(CompIsiLangParser.LogicExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLogicExpr(CompIsiLangParser.LogicExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

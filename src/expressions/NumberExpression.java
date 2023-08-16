@@ -2,12 +2,12 @@ package expressions;
 
 import symbols.DataType;
 
-public class NumberExpression extends AbstractExpression{
-	
-	private double numberValue;
+public class NumberExpression extends AbstractExpression {
+
+	private Object numberValue;
 	private DataType type;
 
-	public NumberExpression(double numberValue, DataType type) {
+	public NumberExpression(Object numberValue, DataType type) {
 		super();
 		this.numberValue = numberValue;
 		this.type = type;
@@ -15,39 +15,40 @@ public class NumberExpression extends AbstractExpression{
 
 	public NumberExpression(String numberString, DataType type) {
 		super();
-		switch(type){
+		switch (type) {
 			case REAL -> this.numberValue = Double.parseDouble(numberString);
 			case INTEGER -> this.numberValue = Integer.parseInt(numberString);
+			default -> throw new IllegalArgumentException("Unexpected value: " + type);
 		}
 		this.type = type;
 	}
 
-	public double getNumberValue() {
+	public Object getNumberValue() {
 		return numberValue;
 	}
-
 
 	public void setNumberValue(float numberValue) {
 		this.numberValue = numberValue;
 	}
 
-
 	public NumberExpression() {
 		super();
 	}
 
-	public String toString(){
-		switch(type){
+	public String toString() {
+		switch (type) {
 			case INTEGER -> {
 				return String.valueOf((int) numberValue);
 			}
 			case REAL -> {
 				return String.valueOf(numberValue);
 			}
+			case BOOLEAN -> throw new UnsupportedOperationException("Unimplemented case: " + type);
+			case UNKNOWN -> throw new UnsupportedOperationException("Unimplemented case: " + type);
+			default -> throw new IllegalArgumentException("Unexpected value: " + type);
 		}
-		return null;
-	}
 
+	}
 
 	public DataType getType() {
 		return type;
@@ -58,7 +59,7 @@ public class NumberExpression extends AbstractExpression{
 	}
 
 	@Override
-	public double eval() {
+	public Object eval() {
 		// TODO Auto-generated method stub
 		return numberValue;
 	}

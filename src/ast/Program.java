@@ -10,12 +10,12 @@ import symbols.SymbolTable;
 public class Program {
 
 	private String filename;
-	private List<AbstractCommand> comandos;
+	private List<AbstractCommand> commands;
 	private SymbolTable symbolTable;
 
 	public Program() {
 		this.filename = "output.js";
-		this.comandos = new ArrayList<AbstractCommand>();
+		this.commands = new ArrayList<AbstractCommand>();
 	}
 
 	public void generateTarget() {
@@ -23,7 +23,7 @@ public class Program {
 			FileWriter fw = new FileWriter(filename);
 			PrintWriter pw = new PrintWriter(fw);
 			StringBuilder strBuilder = new StringBuilder();
-			comandos.stream().forEach(c -> {
+			commands.stream().forEach(c -> {
 				System.out.print(c.generateCode());
 				strBuilder.append(c.generateCode());
 			});
@@ -35,12 +35,12 @@ public class Program {
 		}
 	}
 
-	public List<AbstractCommand> getComandos() {
-		return comandos;
+	public List<AbstractCommand> getCommands() {
+		return commands;
 	}
 
-	public void setComandos(List<AbstractCommand> comandos) {
-		this.comandos = comandos;
+	public void setCommands(List<AbstractCommand> commands) {
+		this.commands = commands;
 	}
 
 	public SymbolTable getSymbolTable() {
@@ -54,9 +54,10 @@ public class Program {
 	public void run() {
 		RuntimeEntity runtime = new RuntimeEntity();
 		runtime.updateContent(symbolTable.getSymbols().values());
-		comandos.stream().forEach(c -> {
+		commands.stream().forEach(c -> {
 			c.run();
 			runtime.updateContent(symbolTable.getSymbols().values());
 		});
 	}
+	
 }

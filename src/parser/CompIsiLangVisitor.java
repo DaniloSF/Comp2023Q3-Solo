@@ -1,16 +1,5 @@
-// Generated from C:/Users/Danilo/Documents/UFABC/Compiladores/Comp2023Q3\CompIsiLang.g4 by ANTLR 4.12.0
+// Generated from C:/Users/Danilo/Documents/UFABC/Compiladores/Comp2023Q3-Solo\CompIsiLang.g4 by ANTLR 4.12.0
 package parser;
-
-	import java.util.ArrayList;
-	import java.util.List;
-	import symbols.DataType;
-	import java.util.Stack;
-	import symbols.Identifier;
-	import symbols.SymbolTable;
-	import expressions.*;
-	import ast.*;
-	
-
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -34,11 +23,11 @@ public interface CompIsiLangVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitDecl(CompIsiLangParser.DeclContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link CompIsiLangParser#bloco}.
+	 * Visit a parse tree produced by {@link CompIsiLangParser#block}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitBloco(CompIsiLangParser.BlocoContext ctx);
+	T visitBlock(CompIsiLangParser.BlockContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link CompIsiLangParser#tipo}.
 	 * @param ctx the parse tree
@@ -88,17 +77,35 @@ public interface CompIsiLangVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitExpr(CompIsiLangParser.ExprContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link CompIsiLangParser#exprl}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExprl(CompIsiLangParser.ExprlContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link CompIsiLangParser#termo}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitTermo(CompIsiLangParser.TermoContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link CompIsiLangParser#exprl}.
+	 * Visit a parse tree produced by {@link CompIsiLangParser#termol}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitExprl(CompIsiLangParser.ExprlContext ctx);
+	T visitTermol(CompIsiLangParser.TermolContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link CompIsiLangParser#fator}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFator(CompIsiLangParser.FatorContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link CompIsiLangParser#logicExpr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLogicExpr(CompIsiLangParser.LogicExprContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link CompIsiLangParser#number}.
 	 * @param ctx the parse tree

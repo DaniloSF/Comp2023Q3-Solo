@@ -3,7 +3,7 @@ package symbols;
 public class Identifier {
 	private String text;
 	private DataType type;
-	private double value;
+	private Object value;
 
 	public String getText() {
 		return text;
@@ -36,12 +36,12 @@ public class Identifier {
 		return "Identifier [text=" + text + ", type=" + type + ", value=" + value + "]";
 	}
 
-	public double getValue() {
+	public Object getValue() {
 		return value;
 	}
 
-	public void setValue(double value) {
-		this.value = value;
+	public void setValue(Object object) {
+		this.value = object;
 	}
 	
 	

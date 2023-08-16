@@ -1,7 +1,10 @@
 package expressions;
 
+import symbols.DataType;
+
 public abstract class AbstractExpression {
 
-	public abstract double eval();
+	public abstract Object eval();
 
+	public abstract DataType getType();
 }
