@@ -19,10 +19,7 @@ public class CmdWhile extends AbstractCommand {
 
     @Override
     public void run() {
-        System.out.println("WHILE before");
-        System.out.println(expr);
         while ((boolean) expr.eval()) {
-            System.out.println("WHILE");
             for (AbstractCommand cmd : cmds) {
                 cmd.run();
             }

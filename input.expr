@@ -1,39 +1,12 @@
 programa
-	REAL a,b.
-	INTEGER c.
+    INTEGER c.
+    c := 6.
 
-	c := 0.
-	escreva("Hello World!").
-	escreva("Digite o valor C").
-	leia(c).
-	
-	a := 2.0.
-	b := 3.2 + 2.0 - 1.0 + 5.0 - 3.0 + a.
-	b := b/2.0.
-	b := b*2.0.
-	escreva(a).
-	escreva(b).
-	se (a >= b) entao {
-		escreva(a).
-	} senao {
-		se (a < b) entao {
-			escreva(a).
-			escreva("goodbye world").
-		} senao {
-			escreva("nao sei").
-		}.
-	}.
-	escreva("Hmm").
-	se (a < b) entao {
-	    escreva("WOW").
-	}.
-
-	para (f := 0 ate 10) faca {
-	    escreva(f).
-	}.
-	enquanto (c > 0) faca {
-	    escreva(c).
-	    c := c - 1.
-	}.
-	escreva("Oi").
+    para (f := 0 ate 10) faca {
+        escreva(f).
+    }.
+    enquanto (c > 0) faca {
+        escreva(c).
+        c := c - 1.
+    }.
 fimprog.

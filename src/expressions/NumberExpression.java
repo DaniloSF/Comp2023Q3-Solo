@@ -60,7 +60,6 @@ public class NumberExpression extends AbstractExpression {
 
 	@Override
 	public Object eval() {
-		// TODO Auto-generated method stub
 		return numberValue;
 	}
 

@@ -203,7 +203,7 @@ public class CompIsiLangVisitorImpl extends CompIsiLangBaseVisitor<Object> {
     }
 
     @Override
-    public AbstractCommand visitCmdRead(CmdReadContext ctx) {
+    public CmdRead visitCmdRead(CmdReadContext ctx) {
         CmdRead cmdRead = new CmdRead();
 
         SymbolTable symbolTable = programa.getSymbolTable();
@@ -220,7 +220,7 @@ public class CompIsiLangVisitorImpl extends CompIsiLangBaseVisitor<Object> {
     }
 
     @Override
-    public AbstractCommand visitCmdWrite(CmdWriteContext ctx) {
+    public CmdWrite visitCmdWrite(CmdWriteContext ctx) {
         CmdWrite cmdWrite = new CmdWrite();
 
         if (ctx.TEXT() != null) {
