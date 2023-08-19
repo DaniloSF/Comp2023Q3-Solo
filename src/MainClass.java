@@ -3,7 +3,7 @@ import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
 
 import ast.Program;
-import listener.CompIsiLangVisitorImpl;
+import visitor.CompIsiLangVisitorImpl;
 import parser.CompIsiLangLexer;
 import parser.CompIsiLangParser;
 
@@ -19,7 +19,7 @@ public class MainClass {
 			Program program = (Program) visitor.visit(tree);
 
 			program.generateTarget();
-			//program.run();
+			// program.run();
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
