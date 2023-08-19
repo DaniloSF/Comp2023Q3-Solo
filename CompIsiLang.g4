@@ -10,7 +10,9 @@ tipo: 'INTEGER' | 'REAL';
 
 lista_var: ID ( VIRG ID)*;
 
-cmd: cmdAttr | cmdRead | cmdWrite | cmdIf;
+cmd: cmdAttr | cmdIf | cmdRead | cmdWrite | cmdWhile | cmdFor;
+
+cmdAttr: ID ATTR expr;
 
 cmdIf:
 	'se' AP logicExpr FP 'entao' AC block FC (
@@ -21,7 +23,9 @@ cmdRead: 'leia' AP ID FP;
 
 cmdWrite: 'escreva' AP ( ID | TEXT) FP;
 
-cmdAttr: ID ATTR expr;
+cmdWhile: 'enquanto' AP logicExpr FP 'faca' AC block FC;
+
+cmdFor: 'para' AP ID ATTR expr 'ate' expr FP 'faca' AC block FC;
 
 expr: termo exprl*;
 

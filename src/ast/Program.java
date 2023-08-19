@@ -14,7 +14,7 @@ public class Program {
 	private SymbolTable symbolTable;
 
 	public Program() {
-		this.filename = "output.js";
+		this.filename = "output.c";
 		this.commands = new ArrayList<AbstractCommand>();
 	}
 
@@ -23,10 +23,20 @@ public class Program {
 			FileWriter fw = new FileWriter(filename);
 			PrintWriter pw = new PrintWriter(fw);
 			StringBuilder strBuilder = new StringBuilder();
+			
+			strBuilder.append("#include <stdio.h>\n");
+
+			strBuilder.append("int main() {\n");
+			
+			strBuilder.append(symbolTable.generateCode());
 			commands.stream().forEach(c -> {
 				System.out.print(c.generateCode());
 				strBuilder.append(c.generateCode());
 			});
+
+			strBuilder.append("return 0;\n");
+			strBuilder.append("}\n");
+
 			pw.println(strBuilder.toString());
 			pw.close();
 			fw.close();
@@ -59,5 +69,5 @@ public class Program {
 			runtime.updateContent(symbolTable.getSymbols().values());
 		});
 	}
-	
+
 }

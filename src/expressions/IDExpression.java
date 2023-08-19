@@ -38,7 +38,6 @@ public class IDExpression extends AbstractExpression {
 
 	@Override
 	public DataType getType() {
-		// TODO Auto-generated method stub
 		return id.getType();
 	}
 }

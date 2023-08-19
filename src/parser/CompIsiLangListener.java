@@ -68,6 +68,16 @@ public interface CompIsiLangListener extends ParseTreeListener {
 	 */
 	void exitCmd(CompIsiLangParser.CmdContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link CompIsiLangParser#cmdAttr}.
+	 * @param ctx the parse tree
+	 */
+	void enterCmdAttr(CompIsiLangParser.CmdAttrContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CompIsiLangParser#cmdAttr}.
+	 * @param ctx the parse tree
+	 */
+	void exitCmdAttr(CompIsiLangParser.CmdAttrContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link CompIsiLangParser#cmdIf}.
 	 * @param ctx the parse tree
 	 */
@@ -98,15 +108,25 @@ public interface CompIsiLangListener extends ParseTreeListener {
 	 */
 	void exitCmdWrite(CompIsiLangParser.CmdWriteContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link CompIsiLangParser#cmdAttr}.
+	 * Enter a parse tree produced by {@link CompIsiLangParser#cmdWhile}.
 	 * @param ctx the parse tree
 	 */
-	void enterCmdAttr(CompIsiLangParser.CmdAttrContext ctx);
+	void enterCmdWhile(CompIsiLangParser.CmdWhileContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link CompIsiLangParser#cmdAttr}.
+	 * Exit a parse tree produced by {@link CompIsiLangParser#cmdWhile}.
 	 * @param ctx the parse tree
 	 */
-	void exitCmdAttr(CompIsiLangParser.CmdAttrContext ctx);
+	void exitCmdWhile(CompIsiLangParser.CmdWhileContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link CompIsiLangParser#cmdFor}.
+	 * @param ctx the parse tree
+	 */
+	void enterCmdFor(CompIsiLangParser.CmdForContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CompIsiLangParser#cmdFor}.
+	 * @param ctx the parse tree
+	 */
+	void exitCmdFor(CompIsiLangParser.CmdForContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link CompIsiLangParser#expr}.
 	 * @param ctx the parse tree

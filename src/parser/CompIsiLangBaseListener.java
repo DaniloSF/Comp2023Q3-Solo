@@ -89,6 +89,18 @@ public class CompIsiLangBaseListener implements CompIsiLangListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterCmdAttr(CompIsiLangParser.CmdAttrContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitCmdAttr(CompIsiLangParser.CmdAttrContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterCmdIf(CompIsiLangParser.CmdIfContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -125,13 +137,25 @@ public class CompIsiLangBaseListener implements CompIsiLangListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCmdAttr(CompIsiLangParser.CmdAttrContext ctx) { }
+	@Override public void enterCmdWhile(CompIsiLangParser.CmdWhileContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCmdAttr(CompIsiLangParser.CmdAttrContext ctx) { }
+	@Override public void exitCmdWhile(CompIsiLangParser.CmdWhileContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterCmdFor(CompIsiLangParser.CmdForContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitCmdFor(CompIsiLangParser.CmdForContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

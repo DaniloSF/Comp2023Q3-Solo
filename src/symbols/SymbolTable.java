@@ -1,6 +1,7 @@
 package symbols;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Stack;
 
@@ -53,6 +54,35 @@ public class SymbolTable {
 
 	public void setSymbols(HashMap<String, Identifier> symbols) {
 		this.globalScope = symbols;
+	}
+
+	public String generateCode() {
+		StringBuilder str = new StringBuilder();
+		List<Identifier> floatList;
+		List<Identifier> intList;
+
+		floatList = this.globalScope.values().stream().filter(i -> i.getType() == DataType.REAL).toList();
+		intList = this.globalScope.values().stream().filter(i -> i.getType() == DataType.INTEGER).toList();
+
+		if (!floatList.isEmpty()) {
+			str.append("float ");
+			for (Identifier id : floatList) {
+				str.append(id.getText() + ", ");
+			}
+			str.delete(str.length() - 2, str.length());
+			str.append(";\n");
+		}
+
+		if (!intList.isEmpty()) {
+			str.append("int ");
+			for (Identifier id : intList) {
+				str.append(id.getText() + ", ");
+			}
+			str.delete(str.length() - 2, str.length());
+			str.append(";\n");
+		}
+		
+		return str.toString();
 	}
 
 }

@@ -12,40 +12,40 @@ public class BinaryExpression extends AbstractExpression {
 	public Object eval() {
 		switch (type) {
 			case INTEGER: {
-				Integer leftValue = (Integer) leftSide.eval();
-				Integer rightValue = (Integer) rightSide.eval();
-
+				int leftValue = (int) leftSide.eval();
+				int rightValue = (int) rightSide.eval();
+				System.out.println(leftValue + " " + operator + " " + rightValue);
 				switch (operator) {
 					case "+":
-						return (Integer) leftValue + (Integer) rightValue;
+						return leftValue + rightValue;
 					case "-":
-						return (Integer) leftValue - (Integer) rightValue;
+						return leftValue - rightValue;
 					case "*":
-						return (Integer) leftValue * (Integer) rightValue;
+						return leftValue * rightValue;
 					case "/":
-						return (Integer) leftValue / (Integer) rightValue;
+						return leftValue / rightValue;
 					case "%":
-						return (Integer) leftValue % (Integer) rightValue;
+						return leftValue % rightValue;
 					case "==":
-						return (Integer) leftValue == (Integer) rightValue;
+						return leftValue == rightValue;
 					case "!=":
-						return (Integer) leftValue != (Integer) rightValue;
+						return leftValue != rightValue;
 					case "<":
-						return (Integer) leftValue < (Integer) rightValue;
+						return leftValue < rightValue;
 					case ">":
-						return (Integer) leftValue > (Integer) rightValue;
+						return leftValue > rightValue;
 					case "<=":
-						return (Integer) leftValue <= (Integer) rightValue;
+						return leftValue <= rightValue;
 					case ">=":
-						return (Integer) leftValue >= (Integer) rightValue;
+						return leftValue >= rightValue;
 					default:
 						throw new RuntimeException("Invalid operator");
 				}
 			}
 
 			case REAL: {
-				Float leftValue = (Float) leftSide.eval();
-				Float rightValue = (Float) rightSide.eval();
+				double leftValue = (double) leftSide.eval();
+				double rightValue = (double) rightSide.eval();
 
 				switch (operator) {
 					case "+":

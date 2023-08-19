@@ -1,5 +1,4 @@
-// Generated from C:/Users/Danilo/Documents/UFABC/Compiladores/Comp2023Q3-Solo\CompIsiLang.g4 by ANTLR 4.12.0
-package parser;
+// Generated from c:\Users\Danilo\Documents\UFABC\Compiladores\Comp2023Q3-Solo\CompIsiLang.g4 by ANTLR 4.9.2
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -9,9 +8,9 @@ import java.util.List;
 import java.util.Iterator;
 import java.util.ArrayList;
 
-@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue"})
+@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class CompIsiLangParser extends Parser {
-	static { RuntimeMetaData.checkVersion("4.12.0", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.9.2", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -103,7 +102,6 @@ public class CompIsiLangParser extends Parser {
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class ProgramaContext extends ParserRuleContext {
 		public BlockContext block() {
 			return getRuleContext(BlockContext.class,0);
@@ -118,19 +116,6 @@ public class CompIsiLangParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_programa; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterPrograma(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitPrograma(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitPrograma(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ProgramaContext programa() throws RecognitionException {
@@ -173,7 +158,6 @@ public class CompIsiLangParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class DeclContext extends ParserRuleContext {
 		public TipoContext tipo() {
 			return getRuleContext(TipoContext.class,0);
@@ -186,19 +170,6 @@ public class CompIsiLangParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_decl; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterDecl(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitDecl(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitDecl(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final DeclContext decl() throws RecognitionException {
@@ -226,7 +197,6 @@ public class CompIsiLangParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class BlockContext extends ParserRuleContext {
 		public List<CmdContext> cmd() {
 			return getRuleContexts(CmdContext.class);
@@ -242,19 +212,6 @@ public class CompIsiLangParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_block; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterBlock(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitBlock(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitBlock(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final BlockContext block() throws RecognitionException {
@@ -279,7 +236,7 @@ public class CompIsiLangParser extends Parser {
 				setState(56); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & 8394528L) != 0) );
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__4) | (1L << T__7) | (1L << T__8) | (1L << T__9) | (1L << T__11) | (1L << ID))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -293,25 +250,11 @@ public class CompIsiLangParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class TipoContext extends ParserRuleContext {
 		public TipoContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_tipo; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterTipo(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitTipo(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitTipo(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final TipoContext tipo() throws RecognitionException {
@@ -344,7 +287,6 @@ public class CompIsiLangParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class Lista_varContext extends ParserRuleContext {
 		public List<TerminalNode> ID() { return getTokens(CompIsiLangParser.ID); }
 		public TerminalNode ID(int i) {
@@ -358,19 +300,6 @@ public class CompIsiLangParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_lista_var; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterLista_var(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitLista_var(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitLista_var(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final Lista_varContext lista_var() throws RecognitionException {
@@ -411,7 +340,6 @@ public class CompIsiLangParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class CmdContext extends ParserRuleContext {
 		public CmdAttrContext cmdAttr() {
 			return getRuleContext(CmdAttrContext.class,0);
@@ -435,19 +363,6 @@ public class CompIsiLangParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_cmd; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterCmd(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitCmd(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitCmd(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final CmdContext cmd() throws RecognitionException {
@@ -514,7 +429,6 @@ public class CompIsiLangParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class CmdAttrContext extends ParserRuleContext {
 		public TerminalNode ID() { return getToken(CompIsiLangParser.ID, 0); }
 		public TerminalNode ATTR() { return getToken(CompIsiLangParser.ATTR, 0); }
@@ -525,19 +439,6 @@ public class CompIsiLangParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_cmdAttr; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterCmdAttr(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitCmdAttr(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitCmdAttr(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final CmdAttrContext cmdAttr() throws RecognitionException {
@@ -565,7 +466,6 @@ public class CompIsiLangParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class CmdIfContext extends ParserRuleContext {
 		public TerminalNode AP() { return getToken(CompIsiLangParser.AP, 0); }
 		public LogicExprContext logicExpr() {
@@ -590,19 +490,6 @@ public class CompIsiLangParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_cmdIf; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterCmdIf(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitCmdIf(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitCmdIf(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final CmdIfContext cmdIf() throws RecognitionException {
@@ -657,7 +544,6 @@ public class CompIsiLangParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class CmdReadContext extends ParserRuleContext {
 		public TerminalNode AP() { return getToken(CompIsiLangParser.AP, 0); }
 		public TerminalNode ID() { return getToken(CompIsiLangParser.ID, 0); }
@@ -666,19 +552,6 @@ public class CompIsiLangParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_cmdRead; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterCmdRead(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitCmdRead(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitCmdRead(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final CmdReadContext cmdRead() throws RecognitionException {
@@ -708,7 +581,6 @@ public class CompIsiLangParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class CmdWriteContext extends ParserRuleContext {
 		public TerminalNode AP() { return getToken(CompIsiLangParser.AP, 0); }
 		public TerminalNode FP() { return getToken(CompIsiLangParser.FP, 0); }
@@ -718,19 +590,6 @@ public class CompIsiLangParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_cmdWrite; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterCmdWrite(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitCmdWrite(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitCmdWrite(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final CmdWriteContext cmdWrite() throws RecognitionException {
@@ -769,7 +628,6 @@ public class CompIsiLangParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class CmdWhileContext extends ParserRuleContext {
 		public TerminalNode AP() { return getToken(CompIsiLangParser.AP, 0); }
 		public LogicExprContext logicExpr() {
@@ -785,19 +643,6 @@ public class CompIsiLangParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_cmdWhile; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterCmdWhile(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitCmdWhile(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitCmdWhile(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final CmdWhileContext cmdWhile() throws RecognitionException {
@@ -835,7 +680,6 @@ public class CompIsiLangParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class CmdForContext extends ParserRuleContext {
 		public TerminalNode AP() { return getToken(CompIsiLangParser.AP, 0); }
 		public TerminalNode ID() { return getToken(CompIsiLangParser.ID, 0); }
@@ -856,19 +700,6 @@ public class CompIsiLangParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_cmdFor; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterCmdFor(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitCmdFor(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitCmdFor(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final CmdForContext cmdFor() throws RecognitionException {
@@ -914,7 +745,6 @@ public class CompIsiLangParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class ExprContext extends ParserRuleContext {
 		public TermoContext termo() {
 			return getRuleContext(TermoContext.class,0);
@@ -929,19 +759,6 @@ public class CompIsiLangParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_expr; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterExpr(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitExpr(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitExpr(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ExprContext expr() throws RecognitionException {
@@ -980,7 +797,6 @@ public class CompIsiLangParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class ExprlContext extends ParserRuleContext {
 		public Token op;
 		public TermoContext termo() {
@@ -992,19 +808,6 @@ public class CompIsiLangParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_exprl; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterExprl(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitExprl(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitExprl(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ExprlContext exprl() throws RecognitionException {
@@ -1040,7 +843,6 @@ public class CompIsiLangParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class TermoContext extends ParserRuleContext {
 		public FatorContext fator() {
 			return getRuleContext(FatorContext.class,0);
@@ -1055,19 +857,6 @@ public class CompIsiLangParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_termo; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterTermo(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitTermo(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitTermo(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final TermoContext termo() throws RecognitionException {
@@ -1106,7 +895,6 @@ public class CompIsiLangParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class TermolContext extends ParserRuleContext {
 		public Token op;
 		public FatorContext fator() {
@@ -1118,19 +906,6 @@ public class CompIsiLangParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_termol; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterTermol(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitTermol(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitTermol(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final TermolContext termol() throws RecognitionException {
@@ -1166,7 +941,6 @@ public class CompIsiLangParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class FatorContext extends ParserRuleContext {
 		public NumberContext number() {
 			return getRuleContext(NumberContext.class,0);
@@ -1181,19 +955,6 @@ public class CompIsiLangParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_fator; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterFator(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitFator(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitFator(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final FatorContext fator() throws RecognitionException {
@@ -1244,7 +1005,6 @@ public class CompIsiLangParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class LogicExprContext extends ParserRuleContext {
 		public Token op;
 		public List<ExprContext> expr() {
@@ -1258,19 +1018,6 @@ public class CompIsiLangParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_logicExpr; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterLogicExpr(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitLogicExpr(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitLogicExpr(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final LogicExprContext logicExpr() throws RecognitionException {
@@ -1298,7 +1045,6 @@ public class CompIsiLangParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class NumberContext extends ParserRuleContext {
 		public TerminalNode INTEGER() { return getToken(CompIsiLangParser.INTEGER, 0); }
 		public TerminalNode REAL() { return getToken(CompIsiLangParser.REAL, 0); }
@@ -1306,19 +1052,6 @@ public class CompIsiLangParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_number; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).enterNumber(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CompIsiLangListener ) ((CompIsiLangListener)listener).exitNumber(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CompIsiLangVisitor ) return ((CompIsiLangVisitor<? extends T>)visitor).visitNumber(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final NumberContext number() throws RecognitionException {
@@ -1352,97 +1085,50 @@ public class CompIsiLangParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\u0004\u0001\u001e\u00a2\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001"+
-		"\u0002\u0002\u0007\u0002\u0002\u0003\u0007\u0003\u0002\u0004\u0007\u0004"+
-		"\u0002\u0005\u0007\u0005\u0002\u0006\u0007\u0006\u0002\u0007\u0007\u0007"+
-		"\u0002\b\u0007\b\u0002\t\u0007\t\u0002\n\u0007\n\u0002\u000b\u0007\u000b"+
-		"\u0002\f\u0007\f\u0002\r\u0007\r\u0002\u000e\u0007\u000e\u0002\u000f\u0007"+
-		"\u000f\u0002\u0010\u0007\u0010\u0002\u0011\u0007\u0011\u0002\u0012\u0007"+
-		"\u0012\u0001\u0000\u0001\u0000\u0004\u0000)\b\u0000\u000b\u0000\f\u0000"+
-		"*\u0001\u0000\u0001\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0001\u0001"+
-		"\u0001\u0001\u0001\u0002\u0001\u0002\u0001\u0002\u0004\u00027\b\u0002"+
-		"\u000b\u0002\f\u00028\u0001\u0003\u0001\u0003\u0001\u0004\u0001\u0004"+
-		"\u0001\u0004\u0005\u0004@\b\u0004\n\u0004\f\u0004C\t\u0004\u0001\u0005"+
-		"\u0001\u0005\u0001\u0005\u0001\u0005\u0001\u0005\u0001\u0005\u0003\u0005"+
-		"K\b\u0005\u0001\u0006\u0001\u0006\u0001\u0006\u0001\u0006\u0001\u0007"+
-		"\u0001\u0007\u0001\u0007\u0001\u0007\u0001\u0007\u0001\u0007\u0001\u0007"+
-		"\u0001\u0007\u0001\u0007\u0001\u0007\u0001\u0007\u0001\u0007\u0001\u0007"+
-		"\u0003\u0007^\b\u0007\u0001\b\u0001\b\u0001\b\u0001\b\u0001\b\u0001\t"+
-		"\u0001\t\u0001\t\u0001\t\u0001\t\u0001\n\u0001\n\u0001\n\u0001\n\u0001"+
-		"\n\u0001\n\u0001\n\u0001\n\u0001\n\u0001\u000b\u0001\u000b\u0001\u000b"+
-		"\u0001\u000b\u0001\u000b\u0001\u000b\u0001\u000b\u0001\u000b\u0001\u000b"+
-		"\u0001\u000b\u0001\u000b\u0001\u000b\u0001\u000b\u0001\f\u0001\f\u0005"+
-		"\f\u0082\b\f\n\f\f\f\u0085\t\f\u0001\r\u0001\r\u0001\r\u0001\u000e\u0001"+
-		"\u000e\u0005\u000e\u008c\b\u000e\n\u000e\f\u000e\u008f\t\u000e\u0001\u000f"+
-		"\u0001\u000f\u0001\u000f\u0001\u0010\u0001\u0010\u0001\u0010\u0001\u0010"+
-		"\u0001\u0010\u0001\u0010\u0003\u0010\u009a\b\u0010\u0001\u0011\u0001\u0011"+
-		"\u0001\u0011\u0001\u0011\u0001\u0012\u0001\u0012\u0001\u0012\u0000\u0000"+
-		"\u0013\u0000\u0002\u0004\u0006\b\n\f\u000e\u0010\u0012\u0014\u0016\u0018"+
-		"\u001a\u001c\u001e \"$\u0000\u0005\u0001\u0000\u0003\u0004\u0002\u0000"+
-		"\u0010\u0010\u0017\u0017\u0001\u0000\u0012\u0013\u0001\u0000\u0014\u0015"+
-		"\u0001\u0000\u000e\u000f\u009b\u0000&\u0001\u0000\u0000\u0000\u0002/\u0001"+
-		"\u0000\u0000\u0000\u00046\u0001\u0000\u0000\u0000\u0006:\u0001\u0000\u0000"+
-		"\u0000\b<\u0001\u0000\u0000\u0000\nJ\u0001\u0000\u0000\u0000\fL\u0001"+
-		"\u0000\u0000\u0000\u000eP\u0001\u0000\u0000\u0000\u0010_\u0001\u0000\u0000"+
-		"\u0000\u0012d\u0001\u0000\u0000\u0000\u0014i\u0001\u0000\u0000\u0000\u0016"+
-		"r\u0001\u0000\u0000\u0000\u0018\u007f\u0001\u0000\u0000\u0000\u001a\u0086"+
-		"\u0001\u0000\u0000\u0000\u001c\u0089\u0001\u0000\u0000\u0000\u001e\u0090"+
-		"\u0001\u0000\u0000\u0000 \u0099\u0001\u0000\u0000\u0000\"\u009b\u0001"+
-		"\u0000\u0000\u0000$\u009f\u0001\u0000\u0000\u0000&(\u0005\u0001\u0000"+
-		"\u0000\')\u0003\u0002\u0001\u0000(\'\u0001\u0000\u0000\u0000)*\u0001\u0000"+
-		"\u0000\u0000*(\u0001\u0000\u0000\u0000*+\u0001\u0000\u0000\u0000+,\u0001"+
-		"\u0000\u0000\u0000,-\u0003\u0004\u0002\u0000-.\u0005\u0002\u0000\u0000"+
-		".\u0001\u0001\u0000\u0000\u0000/0\u0003\u0006\u0003\u000001\u0003\b\u0004"+
-		"\u000012\u0005\u0019\u0000\u00002\u0003\u0001\u0000\u0000\u000034\u0003"+
-		"\n\u0005\u000045\u0005\u0019\u0000\u000057\u0001\u0000\u0000\u000063\u0001"+
-		"\u0000\u0000\u000078\u0001\u0000\u0000\u000086\u0001\u0000\u0000\u0000"+
-		"89\u0001\u0000\u0000\u00009\u0005\u0001\u0000\u0000\u0000:;\u0007\u0000"+
-		"\u0000\u0000;\u0007\u0001\u0000\u0000\u0000<A\u0005\u0017\u0000\u0000"+
-		"=>\u0005\u0018\u0000\u0000>@\u0005\u0017\u0000\u0000?=\u0001\u0000\u0000"+
-		"\u0000@C\u0001\u0000\u0000\u0000A?\u0001\u0000\u0000\u0000AB\u0001\u0000"+
-		"\u0000\u0000B\t\u0001\u0000\u0000\u0000CA\u0001\u0000\u0000\u0000DK\u0003"+
-		"\f\u0006\u0000EK\u0003\u000e\u0007\u0000FK\u0003\u0010\b\u0000GK\u0003"+
-		"\u0012\t\u0000HK\u0003\u0014\n\u0000IK\u0003\u0016\u000b\u0000JD\u0001"+
-		"\u0000\u0000\u0000JE\u0001\u0000\u0000\u0000JF\u0001\u0000\u0000\u0000"+
-		"JG\u0001\u0000\u0000\u0000JH\u0001\u0000\u0000\u0000JI\u0001\u0000\u0000"+
-		"\u0000K\u000b\u0001\u0000\u0000\u0000LM\u0005\u0017\u0000\u0000MN\u0005"+
-		"\u0011\u0000\u0000NO\u0003\u0018\f\u0000O\r\u0001\u0000\u0000\u0000PQ"+
-		"\u0005\u0005\u0000\u0000QR\u0005\u001a\u0000\u0000RS\u0003\"\u0011\u0000"+
-		"ST\u0005\u001b\u0000\u0000TU\u0005\u0006\u0000\u0000UV\u0005\u001c\u0000"+
-		"\u0000VW\u0003\u0004\u0002\u0000W]\u0005\u001d\u0000\u0000XY\u0005\u0007"+
-		"\u0000\u0000YZ\u0005\u001c\u0000\u0000Z[\u0003\u0004\u0002\u0000[\\\u0005"+
-		"\u001d\u0000\u0000\\^\u0001\u0000\u0000\u0000]X\u0001\u0000\u0000\u0000"+
-		"]^\u0001\u0000\u0000\u0000^\u000f\u0001\u0000\u0000\u0000_`\u0005\b\u0000"+
-		"\u0000`a\u0005\u001a\u0000\u0000ab\u0005\u0017\u0000\u0000bc\u0005\u001b"+
-		"\u0000\u0000c\u0011\u0001\u0000\u0000\u0000de\u0005\t\u0000\u0000ef\u0005"+
-		"\u001a\u0000\u0000fg\u0007\u0001\u0000\u0000gh\u0005\u001b\u0000\u0000"+
-		"h\u0013\u0001\u0000\u0000\u0000ij\u0005\n\u0000\u0000jk\u0005\u001a\u0000"+
-		"\u0000kl\u0003\"\u0011\u0000lm\u0005\u001b\u0000\u0000mn\u0005\u000b\u0000"+
-		"\u0000no\u0005\u001c\u0000\u0000op\u0003\u0004\u0002\u0000pq\u0005\u001d"+
-		"\u0000\u0000q\u0015\u0001\u0000\u0000\u0000rs\u0005\f\u0000\u0000st\u0005"+
-		"\u001a\u0000\u0000tu\u0005\u0017\u0000\u0000uv\u0005\u0011\u0000\u0000"+
-		"vw\u0003\u0018\f\u0000wx\u0005\r\u0000\u0000xy\u0003\u0018\f\u0000yz\u0005"+
-		"\u001b\u0000\u0000z{\u0005\u000b\u0000\u0000{|\u0005\u001c\u0000\u0000"+
-		"|}\u0003\u0004\u0002\u0000}~\u0005\u001d\u0000\u0000~\u0017\u0001\u0000"+
-		"\u0000\u0000\u007f\u0083\u0003\u001c\u000e\u0000\u0080\u0082\u0003\u001a"+
-		"\r\u0000\u0081\u0080\u0001\u0000\u0000\u0000\u0082\u0085\u0001\u0000\u0000"+
-		"\u0000\u0083\u0081\u0001\u0000\u0000\u0000\u0083\u0084\u0001\u0000\u0000"+
-		"\u0000\u0084\u0019\u0001\u0000\u0000\u0000\u0085\u0083\u0001\u0000\u0000"+
-		"\u0000\u0086\u0087\u0007\u0002\u0000\u0000\u0087\u0088\u0003\u001c\u000e"+
-		"\u0000\u0088\u001b\u0001\u0000\u0000\u0000\u0089\u008d\u0003 \u0010\u0000"+
-		"\u008a\u008c\u0003\u001e\u000f\u0000\u008b\u008a\u0001\u0000\u0000\u0000"+
-		"\u008c\u008f\u0001\u0000\u0000\u0000\u008d\u008b\u0001\u0000\u0000\u0000"+
-		"\u008d\u008e\u0001\u0000\u0000\u0000\u008e\u001d\u0001\u0000\u0000\u0000"+
-		"\u008f\u008d\u0001\u0000\u0000\u0000\u0090\u0091\u0007\u0003\u0000\u0000"+
-		"\u0091\u0092\u0003 \u0010\u0000\u0092\u001f\u0001\u0000\u0000\u0000\u0093"+
-		"\u009a\u0003$\u0012\u0000\u0094\u009a\u0005\u0017\u0000\u0000\u0095\u0096"+
-		"\u0005\u001a\u0000\u0000\u0096\u0097\u0003\u0018\f\u0000\u0097\u0098\u0005"+
-		"\u001b\u0000\u0000\u0098\u009a\u0001\u0000\u0000\u0000\u0099\u0093\u0001"+
-		"\u0000\u0000\u0000\u0099\u0094\u0001\u0000\u0000\u0000\u0099\u0095\u0001"+
-		"\u0000\u0000\u0000\u009a!\u0001\u0000\u0000\u0000\u009b\u009c\u0003\u0018"+
-		"\f\u0000\u009c\u009d\u0005\u0016\u0000\u0000\u009d\u009e\u0003\u0018\f"+
-		"\u0000\u009e#\u0001\u0000\u0000\u0000\u009f\u00a0\u0007\u0004\u0000\u0000"+
-		"\u00a0%\u0001\u0000\u0000\u0000\b*8AJ]\u0083\u008d\u0099";
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3 \u00a4\4\2\t\2\4"+
+		"\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t"+
+		"\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
+		"\4\23\t\23\4\24\t\24\3\2\3\2\6\2+\n\2\r\2\16\2,\3\2\3\2\3\2\3\3\3\3\3"+
+		"\3\3\3\3\4\3\4\3\4\6\49\n\4\r\4\16\4:\3\5\3\5\3\6\3\6\3\6\7\6B\n\6\f\6"+
+		"\16\6E\13\6\3\7\3\7\3\7\3\7\3\7\3\7\5\7M\n\7\3\b\3\b\3\b\3\b\3\t\3\t\3"+
+		"\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\5\t`\n\t\3\n\3\n\3\n\3\n\3"+
+		"\n\3\13\3\13\3\13\3\13\3\13\3\f\3\f\3\f\3\f\3\f\3\f\3\f\3\f\3\f\3\r\3"+
+		"\r\3\r\3\r\3\r\3\r\3\r\3\r\3\r\3\r\3\r\3\r\3\r\3\16\3\16\7\16\u0084\n"+
+		"\16\f\16\16\16\u0087\13\16\3\17\3\17\3\17\3\20\3\20\7\20\u008e\n\20\f"+
+		"\20\16\20\u0091\13\20\3\21\3\21\3\21\3\22\3\22\3\22\3\22\3\22\3\22\5\22"+
+		"\u009c\n\22\3\23\3\23\3\23\3\23\3\24\3\24\3\24\2\2\25\2\4\6\b\n\f\16\20"+
+		"\22\24\26\30\32\34\36 \"$&\2\7\3\2\5\6\4\2\22\22\31\31\3\2\24\25\3\2\26"+
+		"\27\3\2\20\21\2\u009d\2(\3\2\2\2\4\61\3\2\2\2\68\3\2\2\2\b<\3\2\2\2\n"+
+		">\3\2\2\2\fL\3\2\2\2\16N\3\2\2\2\20R\3\2\2\2\22a\3\2\2\2\24f\3\2\2\2\26"+
+		"k\3\2\2\2\30t\3\2\2\2\32\u0081\3\2\2\2\34\u0088\3\2\2\2\36\u008b\3\2\2"+
+		"\2 \u0092\3\2\2\2\"\u009b\3\2\2\2$\u009d\3\2\2\2&\u00a1\3\2\2\2(*\7\3"+
+		"\2\2)+\5\4\3\2*)\3\2\2\2+,\3\2\2\2,*\3\2\2\2,-\3\2\2\2-.\3\2\2\2./\5\6"+
+		"\4\2/\60\7\4\2\2\60\3\3\2\2\2\61\62\5\b\5\2\62\63\5\n\6\2\63\64\7\33\2"+
+		"\2\64\5\3\2\2\2\65\66\5\f\7\2\66\67\7\33\2\2\679\3\2\2\28\65\3\2\2\29"+
+		":\3\2\2\2:8\3\2\2\2:;\3\2\2\2;\7\3\2\2\2<=\t\2\2\2=\t\3\2\2\2>C\7\31\2"+
+		"\2?@\7\32\2\2@B\7\31\2\2A?\3\2\2\2BE\3\2\2\2CA\3\2\2\2CD\3\2\2\2D\13\3"+
+		"\2\2\2EC\3\2\2\2FM\5\16\b\2GM\5\20\t\2HM\5\22\n\2IM\5\24\13\2JM\5\26\f"+
+		"\2KM\5\30\r\2LF\3\2\2\2LG\3\2\2\2LH\3\2\2\2LI\3\2\2\2LJ\3\2\2\2LK\3\2"+
+		"\2\2M\r\3\2\2\2NO\7\31\2\2OP\7\23\2\2PQ\5\32\16\2Q\17\3\2\2\2RS\7\7\2"+
+		"\2ST\7\34\2\2TU\5$\23\2UV\7\35\2\2VW\7\b\2\2WX\7\36\2\2XY\5\6\4\2Y_\7"+
+		"\37\2\2Z[\7\t\2\2[\\\7\36\2\2\\]\5\6\4\2]^\7\37\2\2^`\3\2\2\2_Z\3\2\2"+
+		"\2_`\3\2\2\2`\21\3\2\2\2ab\7\n\2\2bc\7\34\2\2cd\7\31\2\2de\7\35\2\2e\23"+
+		"\3\2\2\2fg\7\13\2\2gh\7\34\2\2hi\t\3\2\2ij\7\35\2\2j\25\3\2\2\2kl\7\f"+
+		"\2\2lm\7\34\2\2mn\5$\23\2no\7\35\2\2op\7\r\2\2pq\7\36\2\2qr\5\6\4\2rs"+
+		"\7\37\2\2s\27\3\2\2\2tu\7\16\2\2uv\7\34\2\2vw\7\31\2\2wx\7\23\2\2xy\5"+
+		"\32\16\2yz\7\17\2\2z{\5\32\16\2{|\7\35\2\2|}\7\r\2\2}~\7\36\2\2~\177\5"+
+		"\6\4\2\177\u0080\7\37\2\2\u0080\31\3\2\2\2\u0081\u0085\5\36\20\2\u0082"+
+		"\u0084\5\34\17\2\u0083\u0082\3\2\2\2\u0084\u0087\3\2\2\2\u0085\u0083\3"+
+		"\2\2\2\u0085\u0086\3\2\2\2\u0086\33\3\2\2\2\u0087\u0085\3\2\2\2\u0088"+
+		"\u0089\t\4\2\2\u0089\u008a\5\36\20\2\u008a\35\3\2\2\2\u008b\u008f\5\""+
+		"\22\2\u008c\u008e\5 \21\2\u008d\u008c\3\2\2\2\u008e\u0091\3\2\2\2\u008f"+
+		"\u008d\3\2\2\2\u008f\u0090\3\2\2\2\u0090\37\3\2\2\2\u0091\u008f\3\2\2"+
+		"\2\u0092\u0093\t\5\2\2\u0093\u0094\5\"\22\2\u0094!\3\2\2\2\u0095\u009c"+
+		"\5&\24\2\u0096\u009c\7\31\2\2\u0097\u0098\7\34\2\2\u0098\u0099\5\32\16"+
+		"\2\u0099\u009a\7\35\2\2\u009a\u009c\3\2\2\2\u009b\u0095\3\2\2\2\u009b"+
+		"\u0096\3\2\2\2\u009b\u0097\3\2\2\2\u009c#\3\2\2\2\u009d\u009e\5\32\16"+
+		"\2\u009e\u009f\7\30\2\2\u009f\u00a0\5\32\16\2\u00a0%\3\2\2\2\u00a1\u00a2"+
+		"\t\6\2\2\u00a2\'\3\2\2\2\n,:CL_\u0085\u008f\u009b";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

@@ -4,6 +4,15 @@ public class Identifier {
 	private String text;
 	private DataType type;
 	private Object value;
+	private boolean used = false;
+
+	public boolean isUsed() {
+		return used;
+	}
+
+	public void setUsed(boolean used) {
+		this.used = used;
+	}
 
 	public String getText() {
 		return text;
@@ -43,7 +52,5 @@ public class Identifier {
 	public void setValue(Object object) {
 		this.value = object;
 	}
-	
-	
 
 }

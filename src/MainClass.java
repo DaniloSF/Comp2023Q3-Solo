@@ -19,7 +19,7 @@ public class MainClass {
 			Program program = (Program) visitor.visit(tree);
 
 			program.generateTarget();
-			// parser.runInterpreter();
+			program.run();
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}

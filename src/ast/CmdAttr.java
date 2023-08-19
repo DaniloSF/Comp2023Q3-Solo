@@ -10,7 +10,6 @@ public class CmdAttr extends AbstractCommand {
 
 	@Override
 	public String generateCode() {
-		// TODO Auto-generated method stub
 		return id.getText() + "=" + expr.toString() + ";\n";
 	}
 
@@ -47,7 +46,6 @@ public class CmdAttr extends AbstractCommand {
 
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
 		id.setValue(expr.eval());
 	}
 

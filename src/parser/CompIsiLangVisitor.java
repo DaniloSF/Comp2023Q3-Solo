@@ -47,6 +47,12 @@ public interface CompIsiLangVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitCmd(CompIsiLangParser.CmdContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link CompIsiLangParser#cmdAttr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCmdAttr(CompIsiLangParser.CmdAttrContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link CompIsiLangParser#cmdIf}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -65,11 +71,17 @@ public interface CompIsiLangVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitCmdWrite(CompIsiLangParser.CmdWriteContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link CompIsiLangParser#cmdAttr}.
+	 * Visit a parse tree produced by {@link CompIsiLangParser#cmdWhile}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCmdAttr(CompIsiLangParser.CmdAttrContext ctx);
+	T visitCmdWhile(CompIsiLangParser.CmdWhileContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link CompIsiLangParser#cmdFor}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCmdFor(CompIsiLangParser.CmdForContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link CompIsiLangParser#expr}.
 	 * @param ctx the parse tree

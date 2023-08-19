@@ -4,20 +4,19 @@ import javax.swing.JOptionPane;
 
 import symbols.Identifier;
 
-public class CmdWrite extends AbstractCommand{
-	
+public class CmdWrite extends AbstractCommand {
+
 	private Identifier id;
 	private String text;
-	
+
 	public CmdWrite() {
 		super();
 	}
-	
+
 	public CmdWrite(Identifier id) {
 		super();
 		this.id = id;
 	}
-	
 
 	public CmdWrite(String text) {
 		super();
@@ -26,8 +25,26 @@ public class CmdWrite extends AbstractCommand{
 
 	@Override
 	public String generateCode() {
-		// TODO Auto-generated method stub
-		return "alert(" + (id!=null?id.getText():text) + ");\n";
+		if (text != null) {
+			return "printf(\"%s\", \"" + text + "\\n\");\n";
+		}
+		String dataTypeFormat;
+		switch (id.getType()) {
+			case BOOLEAN:
+			case INTEGER:
+				dataTypeFormat = "\"%d\\n\"";
+				break;
+			case REAL:
+				dataTypeFormat = "\"%f\\n\"";
+				break;
+			case STRING:
+				dataTypeFormat = "\"%s\\n\"";
+				break;
+			default:
+				dataTypeFormat = "\"%s\\n\"";
+				break;
+		}
+		return "printf(" + dataTypeFormat + ", " + id.getText() + ");\n";
 	}
 
 	public Identifier getId() {
@@ -48,8 +65,7 @@ public class CmdWrite extends AbstractCommand{
 
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
-		JOptionPane.showMessageDialog(null, (id!=null? id.getValue():text));
+		JOptionPane.showMessageDialog(null, (id != null ? id.getValue() : text));
 	}
 
 }

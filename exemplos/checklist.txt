@@ -1,0 +1,164 @@
+Possui 2 tipos de variaveis
+
+programa
+    INTEGER a, b.
+    REAL c, d.
+
+    a := 1.
+    b := 2.
+
+    c := 1.0.
+    d := 2.0.
+
+    escreva(a).
+    escreva(b).
+    escreva(c).
+    escreva(d).
+fimprog.
+
+-------------------
+Possui a estrutura if .. else
+
+programa
+    INTEGER a, b.
+    REAL c, d.
+
+    a := 1.
+    b := 2.
+
+    c := 1.0.
+    d := 2.0.
+
+    se (a < b) entao{
+        escreva("a menor que b").
+    } senao {
+        se(a > b) entao{
+            escreva("a maior que b").
+        } senao {
+            escreva("a igual a b").
+        }
+    }
+fimprog.
+-------------------
+Possui estrutura de controle while/do while
+
+programa
+    INTEGER c.
+    c := 6.
+
+    para (f := 0 ate 10) faca {
+        escreva(f).
+    }.
+    enquanto (c > 0) faca {
+        escreva(c).
+        c := c - 1.
+    }.
+fimprog.
+
+-------------------
+Operações aritméticas executadas corretamente
+
+programa
+    INTEGER a, b, c.
+    REAL d, e, f.
+
+    a := 1.
+    b := 2.
+    c := 3.
+
+    d := 1.0.
+    e := 2.0.
+    f := 3.0.
+
+    a := b + c.
+    escreva(a).
+    a := b - c.
+    escreva(a).
+    a := b * c.
+    escreva(a).
+    a := b / c.
+    escreva(a).
+
+    d := e + f.
+    escreva(d).
+    d := e - f.
+    escreva(d).
+    d := e * f.
+    escreva(d).
+    d := e / f.
+    escreva(d).
+fimprog.
+-------------------
+Atribuição realizadas corretamente
+
+programa
+    INTEGER a, b, c.
+    REAL d, e, f.
+
+    a := 1.
+    b := 2.
+    c := 3.
+
+    d := 1.0.
+    e := 2.0.
+    f := 3.0.
+
+    a := b.
+    escreva(a).
+    d := e.
+    escreva(d).
+fimprog.
+
+-------------------
+Possui operações de Entrada e Saida
+
+programa
+    INTEGER a, b.
+
+    leia(a).
+    leia(b).
+
+    escreva(a).
+    escreva(b).
+fimprog.
+-------------------
+Aceita numeros decimais
+
+programa
+    REAL a, b.
+
+    leia(a).
+    leia(b).
+
+    escreva(a).
+    escreva(b).
+fimprog.
+-------------------
+Verifica se uma variavel ja foi previamente declarada
+
+programa
+    INTEGER a, b.
+    INTEGER a.
+
+    a := 1.
+fimprog.
+
+-------------------
+Verifica se uma variavel foi declarada e nao foi usada
+
+programa
+    INTEGER a, b.
+
+    a := 1.
+    escreva(a).
+fimprog.
+-------------------
+Verifica se uma variavel esta sendo usada sem ter valor inicial
+
+programa
+    INTEGER a, b.
+
+    a := 1.
+    escreva(a).
+    escreva(b).
+fimprog.
